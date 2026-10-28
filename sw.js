@@ -1,4 +1,4 @@
-const C="koro-films-v1",F=["box","floor","zoomies","pair","garden","puddle"];
+const C="koro-films-v2",F=["box","floor","zoomies","pair","garden","puddle"];
 const A=["./","index.html","style.css","app.js","manifest.webmanifest",...F.flatMap(f=>[`films/${f}.mp4`,`films/${f}.jpg`])];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(A)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});

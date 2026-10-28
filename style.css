@@ -20,5 +20,20 @@ main{max-width:30rem;margin:0 auto;min-height:100dvh;padding:1.5rem 1.5rem 2.5re
 .hist{list-style:none;padding:0;margin:1.5rem 0}.hist li a{display:flex;gap:.9rem;align-items:center;padding:.55rem;border-radius:.9rem;background:var(--surface);margin-bottom:.6rem}
 .hist img{width:3.2rem;height:4.6rem;object-fit:cover;border-radius:.5rem}.hist b{display:block}
 .note{font-size:.85rem;color:var(--muted);margin-top:auto}
+.small{font-size:.85rem;margin:0 0 .4rem}
+.th{position:relative;display:inline-block}.th i,.stamp i{position:absolute;right:-4px;top:-6px;font-style:normal;color:var(--pink);font-size:.95rem;text-shadow:0 0 4px #0008}
+.thumbs img.fav{border-color:var(--pink)}
+.heart{border:0;background:none;font-size:1.6rem;vertical-align:middle;cursor:pointer;color:var(--pink);padding:0 .2rem;transition:transform .2s}.heart.on{animation:pop .4s}
+@keyframes pop{50%{transform:scale(1.45)}}
+.prog{position:absolute;left:1rem;right:1rem;bottom:.55rem;height:4px;border-radius:4px;background:#ffffff22}.prog b{display:block;height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--pink))}.prog span{position:absolute;top:-.75rem;left:0;transform:translateX(-50%);font-size:.9rem}
+.watch .bot{padding-bottom:2rem}
+.paused{position:absolute;top:45%;left:0;right:0;text-align:center;margin:0;padding:.6rem 1rem;background:#1d1418bb;color:var(--fg)}
+.burst{position:fixed;pointer-events:none;z-index:9}.burst span{position:absolute;font-size:1.4rem;animation:fly 1.1s ease-out forwards;opacity:0}
+@keyframes fly{0%{transform:translate(0,0) scale(.4);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.1);opacity:0}}
+.stamps{background:var(--surface);border:1px dashed var(--green);border-radius:1rem;padding:.8rem;margin:1rem 0}.stamps>div{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem}
+.stamp{position:relative;aspect-ratio:2/3;border-radius:.5rem;overflow:hidden;border:2px solid var(--pink);animation:stamp .5s backwards}.stamp img{width:100%;height:100%;object-fit:cover}.stamp i{right:2px;top:0}
+@keyframes stamp{from{transform:scale(1.8) rotate(-12deg);opacity:0}}
+.favs{margin-top:1.2rem}.favs .thumbs{margin:.4rem 0 0;flex-wrap:wrap}
+@media(min-width:900px){.watch{border-left:1px solid #ffffff14;border-right:1px solid #ffffff14;box-shadow:0 0 60px #f27aa822}}
 @media(min-width:900px){.home,.page{max-width:34rem}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.burst{display:none}}
