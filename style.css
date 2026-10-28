@@ -1,0 +1,24 @@
+:root{--bg:#1d1418;--fg:#fbeef3;--muted:#cdb3bf;--pink:#f27aa8;--green:#5fc79a;--surface:#2e2228}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.5 system-ui,"Hiragino Sans","Noto Sans JP",sans-serif}
+button,a{font:inherit;color:inherit}a{text-decoration:none}
+main{max-width:30rem;margin:0 auto;min-height:100dvh;padding:1.5rem 1.5rem 2.5rem;display:flex;flex-direction:column}
+.home{justify-content:flex-end;background:radial-gradient(circle at 70% 20%,#f27aa833,transparent 55%),radial-gradient(circle at 20% 45%,#5fc79a2a,transparent 50%)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.big{font:700 3.2rem/1.05 Georgia,"Hiragino Mincho ProN",serif;margin:0}.sub{color:var(--pink);font-size:1.3rem;margin:.3rem 0 0}
+.muted{color:var(--muted)}.count{color:var(--green);font-weight:700}
+.btn{display:flex;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:1rem;padding:1rem;font-weight:700;cursor:pointer;background:var(--pink);color:#2a0f1b;width:100%;text-align:center}
+.btn.alt{background:var(--surface);color:var(--fg)}.btn.green{background:var(--green);color:#0d2a1d}
+.row{display:flex;gap:.75rem;margin-top:1rem}.row>*{flex:1}
+.pill{border:1px solid #ffffff22;background:var(--surface);border-radius:99px;padding:.45rem .9rem;font-size:.9rem;cursor:pointer;white-space:nowrap}
+.links{display:flex;gap:1rem;margin-top:1.2rem;flex-wrap:wrap}
+.thumbs{display:flex;gap:.4rem;margin:1rem 0}.thumbs img{width:3rem;height:4.5rem;object-fit:cover;border-radius:.5rem;border:2px solid transparent;opacity:.45}.thumbs img.new{opacity:1;border-color:var(--green)}
+.watch{position:relative;padding:0;max-width:32rem;height:100dvh;overflow:hidden}
+.watch video{width:100%;height:100%;object-fit:cover;background:#000;display:block}
+.watch .shade{position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.watch .top{position:absolute;inset:0 0 auto 0;padding:1rem}.watch .bot{position:absolute;inset:auto 0 0 0;padding:1rem 1rem 1.5rem}
+.title{font:700 1.9rem/1.1 Georgia,"Hiragino Mincho ProN",serif;margin:0}
+.hist{list-style:none;padding:0;margin:1.5rem 0}.hist li a{display:flex;gap:.9rem;align-items:center;padding:.55rem;border-radius:.9rem;background:var(--surface);margin-bottom:.6rem}
+.hist img{width:3.2rem;height:4.6rem;object-fit:cover;border-radius:.5rem}.hist b{display:block}
+.note{font-size:.85rem;color:var(--muted);margin-top:auto}
+@media(min-width:900px){.home,.page{max-width:34rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}

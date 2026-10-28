@@ -1,2 +1,2 @@
-# koro-films
-Koro Films for Rie: six corgi films, each once until she's seen them all. EN/日本語, works offline.
+# Koro Films for Rie
+Six short corgi films for Rie. Each plays once until she's seen them all. English / 日本語. Works offline after the first visit.
